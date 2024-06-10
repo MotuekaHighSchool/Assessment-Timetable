@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Data from "./data.json";
+import logo from "./mhs.png";
 
 function App() {
   const [nsn, setNsn] = useState("");
@@ -8,6 +9,8 @@ function App() {
 
   return (
     <>
+      <img src={logo} alt="Motueka High School Logo" />
+      <h1>Assessment Timetable</h1>
       <div className="input-group mb-3">
         <input
           value={nsn}
