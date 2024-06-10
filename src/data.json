@@ -1,0 +1,17 @@
+[
+      {
+        "nsn": "1234",
+        "room": "11",
+        "assessment": "Writing"
+      },
+      {
+        "nsn": "4321",
+        "room": "12",
+        "assessment": "Reading"
+      },
+      {
+        "nsn": "2345",
+        "room": "13",
+        "assessment": "Writing"
+      }
+]
