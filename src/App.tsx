@@ -11,6 +11,11 @@ function App() {
     <>
       <img src={logo} alt="Motueka High School Logo" />
       <h1>Assessment Timetable</h1>
+      <p>
+        Input your NSN into the box below and press search to see when and where
+        your exams will be.
+      </p>
+
       <div className="input-group mb-3">
         <input
           value={nsn}
@@ -22,7 +27,7 @@ function App() {
           aria-describedby="basic-addon2"
         />
       </div>
-      {nsn !== "" && <p>Your NSN is {nsn}.</p>}
+      {nsn !== "" && <p>Searching for the timetable of NSN: {nsn}.</p>}
 
       {displayIndex >= 0 && <h2>{Data[displayIndex].nsn}</h2>}
 
@@ -49,7 +54,7 @@ function App() {
       </button>
       <button
         type="button"
-        className="btn btn-danger"
+        className="btn btn-danger mx-2"
         onClick={() => {
           setNsn("");
           setDisplayIndex(-1);
