@@ -15,7 +15,6 @@ function App() {
         Input your NSN into the box below and press search to see when and where
         your exams will be.
       </p>
-
       <div className="input-group mb-3">
         <input
           value={nsn}
@@ -28,23 +27,22 @@ function App() {
         />
       </div>
       {nsn !== "" && <p>Searching for the timetable of NSN: {nsn}.</p>}
-
       {displayIndex >= 0 && <h2>{Data[displayIndex].nsn}</h2>}
-
+      // Add component here so that variables can be declared at the correct
+      time, then add index capability
       {displayIndex >= 0 && (
         <p>
-          Your {Data[displayIndex].assessment} assessment is in room{" "}
-          {Data[displayIndex].room}.
+          Your {Data[displayIndex].assessment1} assessment is in room{" "}
+          {Data[displayIndex].room1} on the {Data[displayIndex].date1} at{" "}
+          {Data[displayIndex].time1}.
         </p>
       )}
-
       <button
         type="button"
         className="btn btn-primary"
         onClick={() =>
           nsnMap.forEach((element, index) => {
             if (element == nsn) {
-              console.log(element);
               setDisplayIndex(index);
             }
           })

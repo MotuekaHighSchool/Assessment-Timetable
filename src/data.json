@@ -1,17 +1,33 @@
 [
-      {
-        "nsn": "1234",
-        "room": "11",
-        "assessment": "Writing"
-      },
-      {
-        "nsn": "4321",
-        "room": "12",
-        "assessment": "Reading"
-      },
-      {
-        "nsn": "2345",
-        "room": "13",
-        "assessment": "Writing"
-      }
+  {
+    "nsn": "1234",
+    "assessment": ["Writing", "Math"],
+    "room": ["11", "18"],
+    "date": ["11th of June", "14th of June"],
+    "time": ["2:00 PM", "10:00 AM"]
+  },
+  {
+    "nsn": "4321",
+    "assessmentQuantity": "2",
+    "assessment1": "Reading",
+    "room1": "12",
+    "date1": "12th of June",
+    "time1": "1:00 PM",
+    "assessment2": "Math",
+    "room2": "25",
+    "date2": "15th of June",
+    "time2": "1:00 PM"
+  },
+  {
+    "nsn": "2345",
+    "assessmentQuantity": "2",
+    "assessment1": "Writing",
+    "room1": "13",
+    "date1": "13th of June",
+    "time1": "10:00 AM",
+    "assessment2": "Physical Education",
+    "room2": "4A",
+    "date2": "16th of June",
+    "time2": "2:00 PM"
+  }
 ]
