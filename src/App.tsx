@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Data from "./data.json";
 import logo from "./mhs.png";
+import DataDisplay from "./DataDisplay";
 
 function App() {
   const [nsn, setNsn] = useState("");
   const nsnMap = Data.map((student) => student.nsn);
   const [displayIndex, setDisplayIndex] = useState(-1);
+  let foundResult = false;
 
   return (
     <>
@@ -27,26 +29,21 @@ function App() {
         />
       </div>
       {nsn !== "" && <p>Searching for the timetable of NSN: {nsn}.</p>}
-      {displayIndex >= 0 && <h2>{Data[displayIndex].nsn}</h2>}
-      // Add component here so that variables can be declared at the correct
-      time, then add index capability
-      {displayIndex >= 0 && (
-        <p>
-          Your {Data[displayIndex].assessment1} assessment is in room{" "}
-          {Data[displayIndex].room1} on the {Data[displayIndex].date1} at{" "}
-          {Data[displayIndex].time1}.
-        </p>
-      )}
+      <DataDisplay index={displayIndex} />
       <button
         type="button"
         className="btn btn-primary"
-        onClick={() =>
+        onClick={() => {
           nsnMap.forEach((element, index) => {
             if (element == nsn) {
               setDisplayIndex(index);
+              foundResult = true;
             }
-          })
-        }
+          });
+          if (foundResult == false) {
+            setDisplayIndex(-2);
+          }
+        }}
       >
         Search
       </button>
