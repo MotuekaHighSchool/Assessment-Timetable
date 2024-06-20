@@ -1,12 +1,15 @@
 import Data from "./data.json";
+import { Item } from "./App.tsx";
 
 interface Props {
   index: number;
+  items: Item;
 }
 
 function DataDisplay(props: Props) {
   return (
     <div>
+      {/*
       {props.index >= 0 && (
         <>
           <h2>{Data[props.index].nsn}</h2>
@@ -18,6 +21,7 @@ function DataDisplay(props: Props) {
         </>
       )}
       {props.index == -2 && <p>No results found.</p>}
+      */}
     </div>
   );
 }
